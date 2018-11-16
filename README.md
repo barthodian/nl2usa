@@ -7,13 +7,19 @@ Set of utilities for a Dutchman in the US
 Use:
 
 ```bash
-npm install
+    npm install
 ```
 
 For 1:1 currency conversion:
 
 ```bash
-node currency
+    node currency
+```
+
+For distance conversion:
+
+```bash
+    node distance
 ```
 
 Example output:
