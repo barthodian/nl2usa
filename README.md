@@ -4,20 +4,20 @@ Set of utilities for a Dutchman in the US
 
 ## Getting Started
 
-use
+Use:
 
-```sh
+```bash
 npm install
 ```
 
-then
+For 1:1 currency conversion:
 
-```sh
+```bash
 node currency
 ```
 
 Example output:
 
-```sh
+```console
 '1 EUR is 1.1305 USD' says European Central Bank.
 ```
