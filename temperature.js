@@ -4,26 +4,41 @@ const celsius = {
     rankine: 493.47
 }
 
+function fahrenheit_to_celsius( fahrenheit ){
+    return ( fahrenheit - 32 ) / 1.8000
+}
+
+function kelvin_to_celsius( kelvin ){
+    return kelvin - 273.15
+}
+
+function rankine_to_celsius( rankine ){
+    return ( rankine - 491.67 ) / 1.8000
+}
+
 function convert( temperature, unit ) {
     for ( let i in celsius ) {
         switch ( unit ) {
             case "fahrenheit":
                 if ( i === "fahrenheit" ) {
-                    return ( temperature - 32 ) / 1.8000
+                    return fahrenheit_to_celsius( temperature )
                 }
                 break;
             case "kelvin":
                 if ( i === "kelvin" ) {
-                    return temperature - 273.15
+                    return kelvin_to_celsius( temperature )
                 }
                 break;
             case "rankine":
                 if ( i === "rankine" ) {
-                    return ( temperature - 491.67 ) / 1.8000
+                    return rankine_to_celsius( temperature )
                 }
                 break;
         }
     }
 }
 
-console.log( convert( 79, "fahrenheit" ) )
+console.log( "1 Fahrenheit is", convert( 1, "fahrenheit" ), "Celsius" )
+console.log( "1 Kelvin is", convert( 1, "kelvin" ), "Celsius" )
+console.log( "1 Rankine is", convert( 1, "rankine" ), "Celsius" )
+
