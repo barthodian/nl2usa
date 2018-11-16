@@ -12,6 +12,6 @@ request( "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", ( erro
 
   const $ = cheerio.load( body )
   const usd = $( "Cube[currency='USD']" ).attr( "rate" )
-  console.log( "'1 EUR is", usd, "USD' says European Central Bank." )
-  console.log( "'1 USD is", 1 / usd, "USD' says European Central Bank." )
+  console.log( "1 EUR is", usd, "USD" )
+  console.log( "1 USD is", 1 / usd, "USD" )
 } )
