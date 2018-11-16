@@ -4,7 +4,7 @@ Set of utilities for a Dutchman in the US
 
 ## Getting Started
 
-Use:
+Install dependencies:
 
 ```bash
 npm install
