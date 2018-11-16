@@ -1,6 +1,6 @@
 # NL2USA
 
-Set of basic conversions from US standards to Dutch standards.
+Set of basic conversion tools from US standards to Dutch standards.
 
 ## Getting Started
 
