@@ -1,6 +1,6 @@
 # NL2USA
 
-Set of utilities for a Dutchman in the US
+Set of basic conversions from US standards to Dutch standards.
 
 ## Getting Started
 
