@@ -41,3 +41,18 @@ Example output:
 1 Mile is equivalent to 1609340 milimeter, 160934 centimeter, and 1609.34 meter
 ```
 
+### Temperature conversion
+
+For temperature conversion:
+
+```bash
+node temperature
+```
+
+Example output:
+
+```output
+1 Fahrenheit is -17.22222222222222 Celsius
+1 Kelvin is -272.15 Celsius
+1 Rankine is -272.59444444444443 Celsius
+```
