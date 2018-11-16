@@ -1,0 +1,19 @@
+{
+  "name": "nl2usa",
+  "version": "1.0.0",
+  "description": "Set of utilities for a Dutchman in the US",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barthodian/nl2usa.git"
+  },
+  "author": "Barthodian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barthodian/nl2usa/issues"
+  },
+  "homepage": "https://github.com/barthodian/nl2usa#readme"
+}
