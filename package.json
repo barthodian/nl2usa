@@ -1,7 +1,7 @@
 {
   "name": "nl2usa",
   "version": "1.0.0",
-  "description": "Set of utilities for a Dutchman in the US",
+  "description": "Set of basic conversion tools from US standards to Dutch standards",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
