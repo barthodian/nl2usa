@@ -1,6 +1,7 @@
 const request = require( "request" )
 const cheerio = require( "cheerio" )
 
+
 const ecb_to_usd = new Promise( ( resolve, reject ) => {
   request( "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", ( error, response, body ) => {
     if ( error ){
@@ -23,10 +24,7 @@ function currencyConvert( unit, currency, source ) {
       ecb_to_usd.then( value => {
         console.log( unit + " " + currency, "is", unit / value, "EUR" )
         console.log( unit + " " + "EUR is", unit * value + " " + currency )
-      }, reason => {
-        
-      })
-
+      }, reason => {})
       break;
   
     default:
