@@ -57,3 +57,14 @@ Example output:
 1 Kelvin is -272.15 Celsius
 1 Rankine is -272.59444444444443 Celsius
 ```
+
+## Why
+
+## Todo
+
+- [ ] temperature.js
+- [ ] currency.js
+- [ ] distance.js
+- [ ] speed.js
+- [ ] timezone.js
+- [ ] api.js

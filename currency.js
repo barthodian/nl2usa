@@ -16,7 +16,7 @@ const ecb_to_usd = new Promise( ( resolve, reject ) => {
     const usd = $( "Cube[currency='USD']" ).attr( "rate" )
     resolve( usd )
   } )
-})
+} )
 
 function currencyConvert( unit, currency, source ) {
   switch ( source ) {
@@ -24,7 +24,7 @@ function currencyConvert( unit, currency, source ) {
       ecb_to_usd.then( value => {
         console.log( unit + " " + currency, "is", unit / value, "EUR" )
         console.log( unit + " " + "EUR is", unit * value + " " + currency )
-      }, reason => {})
+      }, reason => {} )
       break;
   
     default:
@@ -32,4 +32,4 @@ function currencyConvert( unit, currency, source ) {
   }
 }
 
-currencyConvert( 13, "USD", "ECB" )
+currencyConvert( 12, "USD", "ECB" )
