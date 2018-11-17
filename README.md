@@ -21,8 +21,8 @@ node currency
 Example output:
 
 ```output
-1 EUR is 1.1346 USD
-1 USD is 0.8813678829543451 USD
+13 USD is 11.457782478406486 EUR
+13 EUR is 14.7498 USD
 ```
 
 ### Distance conversion
