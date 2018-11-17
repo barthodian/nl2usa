@@ -21,7 +21,7 @@ function currencyConvert( unit, currency, source ) {
   switch ( source ) {
     case "ECB":
       ecb_to_usd.then( value => {
-        console.log( unit + " " + currency, "is", unit / value, "EUR." )
+        console.log( unit + " " + currency, "is", unit / value, "EUR" )
         console.log( unit + " " + "EUR is", unit * value + " " + currency )
       }, reason => {
         
