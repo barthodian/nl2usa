@@ -1,17 +1,37 @@
 const request = require( "request" )
 const cheerio = require( "cheerio" )
 
-request( "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", ( error, response, body ) => {
-  if ( error ){
-    console.log( "error:", error )
-  }
+const ecb_to_usd = new Promise( ( resolve, reject ) => {
+  request( "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", ( error, response, body ) => {
+    if ( error ){
+      return "error:", error
+    }
+  
+    if ( statusCode =! 200 ){
+      return "statusCode:", response && response.statusCode
+    }
+  
+    const $ = cheerio.load( body )
+    const usd = $( "Cube[currency='USD']" ).attr( "rate" )
+    resolve( usd )
+  } )
+})
 
-  if ( statusCode =! 200 ){
-    console.log( "statusCode:", response && response.statusCode )
-  }
+function currencyConvert( unit, currency, source ) {
+  switch ( source ) {
+    case "ECB":
+      ecb_to_usd.then( value => {
+        console.log( unit + " " + currency, "is", unit / value, "EUR." )
+        console.log( unit + " " + "EUR is", unit * value + " " + currency )
+      }, reason => {
+        
+      })
 
-  const $ = cheerio.load( body )
-  const usd = $( "Cube[currency='USD']" ).attr( "rate" )
-  console.log( "1 EUR is", usd, "USD" )
-  console.log( "1 USD is", 1 / usd, "USD" )
-} )
+      break;
+  
+    default:
+      break;
+  }
+}
+
+currencyConvert( 13, "USD", "ECB" )
