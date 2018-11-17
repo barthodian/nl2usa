@@ -12,7 +12,7 @@ npm install
 
 ### Currency conversion
 
-For 1:1 currency conversion:
+For currency conversion:
 
 ```bash
 node currency
