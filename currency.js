@@ -25,12 +25,12 @@ function currencyConvert( unit, currency, source ) {
 
       if ( currency === "USD" ) {
         ecb_to_usd.then( value => {
-          console.log( unit + " " + "EUR is", unit * value + " " + currency, "-", ecb )
+          console.log( unit + " " + currency, "is", unit * value + " " + "EUR", "-", ecb )
         }, reason => {} )
       }
       if ( currency === "EUR" ) {
         ecb_to_usd.then( value => {
-          console.log( unit + " " + currency, "is", unit / value, "EUR -", ecb )
+          console.log( unit + " " + currency, "is", unit / value, "USD", "-", ecb )
         }, reason => {} )
       }
       break;

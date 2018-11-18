@@ -12,17 +12,27 @@ npm install
 
 ### Currency conversion
 
-For currency conversion:
+For USD to EUR conversion:
 
-```bash
-node currency
+```node
+currency( 16, "USD", "ECB" )
+```
+Example output:
+
+```output
+16 EUR is 18.1536 USD - European Central Bank
+```
+
+For EUR to USD conversion:
+
+```node
+currency( 11, "EUR", "ECB" )
 ```
 
 Example output:
 
 ```output
-13 USD is 11.457782478406486 EUR
-13 EUR is 14.7498 USD
+11 EUR is 9.695046712497795 EUR - European Central Bank
 ```
 
 ### Distance conversion
