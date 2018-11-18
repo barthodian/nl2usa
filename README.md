@@ -4,10 +4,11 @@ Set of basic conversion tools from US standards to Dutch standards.
 
 ## Getting Started
 
-Install dependencies:
+Run installation and run server:
 
 ```bash
 npm install
+npm start
 ```
 
 ### Currency conversion
@@ -20,7 +21,7 @@ currency( 16, "USD", "ECB" )
 Example output:
 
 ```output
-16 EUR is 18.1536 USD - European Central Bank
+16 USD is 18.1536 USD - European Central Bank
 ```
 
 For EUR to USD conversion:
@@ -32,7 +33,7 @@ currency( 11, "EUR", "ECB" )
 Example output:
 
 ```output
-11 EUR is 9.695046712497795 EUR - European Central Bank
+11 EUR is 9.695046712497795 USD - European Central Bank
 ```
 
 ### Distance conversion

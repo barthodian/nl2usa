@@ -2,8 +2,8 @@ const currency = require( "./currency" )
 const distance = require( "./distance" )
 const temperature = require( "./temperature" )
 
-currency( 16, "USD", "ECB" )
-currency( 11, "EUR", "ECB" )
+currency( 16, "USD", "EUR" )
+currency( 11, "EUR", "USD" )
 
 distance( 25, "inch", "mm" )
 distance( 5, "mile", "m" )

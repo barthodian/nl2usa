@@ -1,8 +1,7 @@
 const request = require( "request" )
 const cheerio = require( "cheerio" )
 
-
-const ecb_to_usd = new Promise( ( resolve, reject ) => {
+const current_usd = new Promise( ( resolve, reject ) => {
   request( "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", ( error, response, body ) => {
     if ( error ){
       return "error:", error
@@ -18,26 +17,19 @@ const ecb_to_usd = new Promise( ( resolve, reject ) => {
   } )
 } )
 
-function currencyConvert( unit, currency, source ) {
-  switch ( source ) {
-    case "ECB":
-      const ecb = "European Central Bank"
-
-      if ( currency === "USD" ) {
-        ecb_to_usd.then( value => {
-          console.log( unit + " " + currency, "is", unit * value + " " + "EUR", "-", ecb )
-        }, reason => {} )
-      }
-      if ( currency === "EUR" ) {
-        ecb_to_usd.then( value => {
-          console.log( unit + " " + currency, "is", unit / value, "USD", "-", ecb )
-        }, reason => {} )
-      }
-      break;
-  
-    default:
-      break;
+function currency_convert( unit, currency, conversion ) {
+  if ( currency === "USD" && conversion === "EUR" ) {
+    current_usd.then( value => {
+      let result = unit / value
+      console.log( `${unit} ${currency} is ${result} EUR` )
+    }, reason => {} )
+  }
+  if ( currency === "EUR" && conversion === "USD" ) {
+    current_usd.then( value => {
+      let result = unit * value
+      console.log( `${unit} ${currency} is ${result} USD` )
+    }, reason => {} )
   }
 }
 
-module.exports = currencyConvert
+module.exports = currency_convert
