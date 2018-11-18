@@ -12,22 +12,22 @@ const common_unit = {
     "km": 1000000
 }
 
-for ( let i in milimeter ) {
-    const distance = i.charAt( 0 ).toUpperCase() + i.slice( 1 )
-    console.log( "1", distance, "is equivalent to", milimeter[i], "milimeter,", milimeter[i] / 10, "centimeter, and", milimeter[i] / 1000, "meter" )
-}
+// for ( let i in milimeter ) {
+//     const distance = i.charAt( 0 ).toUpperCase() + i.slice( 1 )
+//     console.log( "1", distance, "is equivalent to", milimeter[i], "milimeter,", milimeter[i] / 10, "centimeter, and", milimeter[i] / 1000, "meter" )
+// }
 
 function distanceConvert( distance, unit, conversion ) {
-    for ( let i in milimeter ) {
+    for ( const i in milimeter ) {
         // const distance = i.charAt(0).toUpperCase() + i.slice(1)
         if ( unit === i ) {
-            for ( let i in common_unit ) {
-                if ( conversion === i ) {
-                    console.log( conversion )
+            for ( let metric in common_unit ) {
+                if ( conversion === metric ) {
+                    console.log( ( milimeter[i] / common_unit[metric] ) * distance )
                 }
             }
         }
     }
 }
 
-distanceConvert( 25, "inch", "cm" )
+module.exports = distanceConvert
