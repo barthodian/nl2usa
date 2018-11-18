@@ -21,10 +21,18 @@ const ecb_to_usd = new Promise( ( resolve, reject ) => {
 function currencyConvert( unit, currency, source ) {
   switch ( source ) {
     case "ECB":
-      ecb_to_usd.then( value => {
-        console.log( unit + " " + currency, "is", unit / value, "EUR" )
-        console.log( unit + " " + "EUR is", unit * value + " " + currency )
-      }, reason => {} )
+      const ecb = "European Central Bank"
+
+      if ( currency === "USD" ) {
+        ecb_to_usd.then( value => {
+          console.log( unit + " " + "EUR is", unit * value + " " + currency, "-", ecb )
+        }, reason => {} )
+      }
+      if ( currency === "EUR" ) {
+        ecb_to_usd.then( value => {
+          console.log( unit + " " + currency, "is", unit / value, "EUR -", ecb )
+        }, reason => {} )
+      }
       break;
   
     default:
@@ -32,4 +40,4 @@ function currencyConvert( unit, currency, source ) {
   }
 }
 
-currencyConvert( 12, "USD", "ECB" )
+module.exports = currencyConvert

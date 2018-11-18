@@ -62,9 +62,20 @@ Example output:
 
 ## Todo
 
+### Temperature.js
+
+### Distance.js
+
 - [ ] temperature.js
-- [ ] currency.js
-- [ ] distance.js
-- [ ] speed.js
+
+### Currency.js
+
+- [ ] temperature.js
+
+### Speed.js
+
 - [ ] timezone.js
-- [ ] api.js
+
+### API.js
+
+- [ ] temperature.js
