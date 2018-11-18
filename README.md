@@ -62,20 +62,19 @@ Example output:
 
 ## Todo
 
-### Temperature.js
+### Currency.js
+
+- [x] currency.js
+- [x] export module
+- [ ] remove and replace dependecies
 
 ### Distance.js
 
-- [ ] temperature.js
+- [x] distance.js
+- [x] export module
 
-### Currency.js
+### Temperature.js
 
-- [ ] temperature.js
-
-### Speed.js
-
-- [ ] timezone.js
-
-### API.js
-
-- [ ] temperature.js
+- [x] temperature.js
+- [x] export module
+- [ ] code cleanup

@@ -38,8 +38,4 @@ function convert( temperature, unit ) {
     }
 }
 
-// console.log( "1 Fahrenheit is", convert( 1, "fahrenheit" ), "Celsius" )
-// console.log( "1 Kelvin is", convert( 1, "kelvin" ), "Celsius" )
-// console.log( "1 Rankine is", convert( 1, "rankine" ), "Celsius" )
-
 module.exports = convert
