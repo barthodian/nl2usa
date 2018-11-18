@@ -23,7 +23,7 @@ function distanceConvert( distance, unit, conversion ) {
         if ( unit === i ) {
             for ( let metric in common_unit ) {
                 if ( conversion === metric ) {
-                    console.log( ( milimeter[i] / common_unit[metric] ) * distance )
+                    console.log( distance + " " + unit, "is", ( milimeter[i] / common_unit[metric] ) * distance, conversion )
                 }
             }
         }
