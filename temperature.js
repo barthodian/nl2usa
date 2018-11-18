@@ -21,24 +21,25 @@ function convert( temperature, unit ) {
         switch ( unit ) {
             case "fahrenheit":
                 if ( i === "fahrenheit" ) {
-                    return fahrenheit_to_celsius( temperature )
+                    console.log( temperature + " " + unit, "is", fahrenheit_to_celsius( temperature ), "celsius" )
                 }
                 break;
             case "kelvin":
                 if ( i === "kelvin" ) {
-                    return kelvin_to_celsius( temperature )
+                    console.log(  temperature + " " + unit, "is", kelvin_to_celsius( temperature ), "celsius" )
                 }
                 break;
             case "rankine":
                 if ( i === "rankine" ) {
-                    return rankine_to_celsius( temperature )
+                    console.log(  temperature + " " + unit, "is", rankine_to_celsius( temperature ), "celsius" )
                 }
                 break;
         }
     }
 }
 
-console.log( "1 Fahrenheit is", convert( 1, "fahrenheit" ), "Celsius" )
-console.log( "1 Kelvin is", convert( 1, "kelvin" ), "Celsius" )
-console.log( "1 Rankine is", convert( 1, "rankine" ), "Celsius" )
+// console.log( "1 Fahrenheit is", convert( 1, "fahrenheit" ), "Celsius" )
+// console.log( "1 Kelvin is", convert( 1, "kelvin" ), "Celsius" )
+// console.log( "1 Rankine is", convert( 1, "rankine" ), "Celsius" )
 
+module.exports = convert
