@@ -22,12 +22,14 @@ function currency_convert( unit, currency, conversion ) {
     current_usd.then( value => {
       let result = unit / value
       console.log( `${unit} ${currency} is ${result} EUR` )
+      return result
     }, reason => {} )
   }
   if ( currency === "EUR" && conversion === "USD" ) {
     current_usd.then( value => {
       let result = unit * value
       console.log( `${unit} ${currency} is ${result} USD` )
+      return result
     }, reason => {} )
   }
 }
