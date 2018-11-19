@@ -1,10 +1,10 @@
 const request = require( "request" )
-const cheerio = require( "cheerio" )
 
-const url_destinations = "https://www.norwegian.com/api/destinations/?destinationModel=AirportModel&includeRelations=true&sortByCountryAndName=false&v=b0e2c3c2-989b-46fa-b41e-bbc81bb6182a"
 
-function norwegianCalendar( origin, destination, date ) {
-    request( url_destinations, ( error, response, body ) => {
+function norwegianCalendar( origin, destination, date, currency ) {
+    const url_calendar = `https://www.norwegian.com/api/fare-calendar/calendar?adultCount=1&destinationAirportCode=${ destination }&includeTransit=true&originAirportCode=${ origin }&outboundDate=${ date }&tripType=1&currencyCode=${ currency }&languageCode=nl-NL`
+    
+    request( url_calendar, ( error, response, body ) => {
         if ( error ){
           return "error:", error
         }
@@ -13,11 +13,9 @@ function norwegianCalendar( origin, destination, date ) {
           return "statusCode:", response && response.statusCode
         }
       
-        const $ = cheerio.load( body )
         const destinations = JSON.parse( body )
-        //const usd = $( "Cube[currency='USD']" ).attr( "rate" )
-        console.log( destinations )
+        console.log( destinations.outbound.days )
     } )
 }
 
-norwegianCalendar( "FLLALL", "OSLALL", "2018-" )
+module.exports = norwegianCalendar
