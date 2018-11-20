@@ -2,9 +2,8 @@ const request = require( "request" )
 const https = require( "https" )
 
 function toAndFrom( sort ) {
-    let sorted = ""
+    let sorted = "false"
     if ( sort === "country" ) sorted = "true"
-    if ( sort === "city" ) sorted = "false"
 
     let url = `https://www.norwegian.com/api/destinations/?destinationModel=AirportModel&includeRelations=true&sortByCountryAndName=${ sorted }&v=bb676533-8096-40fb-98c7-f22e11cfc4b4`
 
@@ -42,6 +41,6 @@ function norwegianCalendar( origin, destination, date, currency ) {
     } )
 }
 
-toAndFrom( "country" )
+toAndFrom( "city" )
 
 module.exports = norwegianCalendar
